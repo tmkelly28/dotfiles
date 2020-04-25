@@ -1,0 +1,121 @@
+snippet fn "An arrow function stored in a const"
+const $1 = ($2) => {
+  $3
+}
+endsnippet
+
+snippet route "An express route handler"
+router.$1('$2', (req, res, next) => {
+  $3
+})
+endsnippet
+
+snippet db "A sequelize model definition"
+const $1 = db.define('$2', {
+  $3
+})
+endsnippet
+
+snippet seed "The beginnings of a seed file"
+const seed = async () => {
+  console.log('Preparing to seed the database!')
+  await db.sync({force: true})
+
+  $1
+
+  console.log('Database successfully seeded!')
+  await db.close()
+}
+
+seed().catch(err => {
+  console.log('Something went wrong seeding the database!')
+  console.log(err)
+  db.close()
+})
+endsnippet
+
+snippet rclass "A React class"
+import React, {Component} from 'react'
+
+export default class $1 extends Component {
+  render () {
+    return (
+      $2
+    )
+  }
+}
+endsnippet
+
+snippet describe "A describe block"
+describe('$1', () => {
+  $2
+})
+endsnippet
+
+snippet xdescribe "An xdescribe block"
+xdescribe('$1', () => {
+  $2
+})
+endsnippet
+
+snippet it "An it block"
+it('$1', () => {
+  $2
+})
+endsnippet
+
+snippet xit "An xit block"
+it('$1', () => {
+  $2
+})
+endsnippet
+
+snippet reducer "A Redux reducer"
+const initialState = $1
+
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    default:
+     return state
+  }
+}
+
+export default reducer
+endsnippet
+
+snippet ac "A Redux action creator"
+export const $1 = ($2) => ({
+  type: $3,
+  $4
+})
+endsnippet
+
+snippet tc "A generic redux thunk creator for making AJAX requests"
+export const $1 = ($2) => (dispatch, getState, {axios}) => {
+  try {
+    const {data} = axios.$3($4)
+  } catch (err) {
+  }
+}
+endsnippet
+
+snippet vue "A new Vue single file component"
+<template>
+</template>
+
+<script>
+export default {
+  name: '',
+
+  components: {},
+
+  props: {},
+
+  data: () => ({}),
+
+  computed: {},
+
+  methods: {},
+}
+</script>
+endsnippet

@@ -1,0 +1,19 @@
+snippet mod "module and class"
+# frozen_string_literal: true
+
+module $1
+  class $2
+	  def initialize($3)
+			$4
+		end
+
+		private
+
+		attr_reader $5
+	end
+end
+endsnippet
+
+snippet fro "frozen_string_literal"
+# frozen_string_literal: true
+endsnippet

@@ -1,0 +1,19 @@
+source ~/git-completion.bash
+source ~/.bash_aliases
+
+__git_complete g __git_main
+__git_complete gc _git_checkout
+__git_complete gco _git_checkout
+__git_complete gm _git_merge
+__git_complete gp _git_pull
+
+gpo() {
+  git push origin $(git branch | grep \* | cut -d ' ' -f2)
+}
+
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+export PS1="\h \[\033[36m\]\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] \j \n🜃 "
+export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
