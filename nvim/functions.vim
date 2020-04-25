@@ -12,14 +12,6 @@ function! Fix()
   execute "ALEFix eslint"
 endfunction
 
-function! Indent()
-  execute 'normal! ggVG='
-endfunction
-
-function! Arrow()
-  execute 'normal! dw%a =>'
-endfunction
-
 function! JSON()
   execute '%!python -m json.tool'
 endfunction
@@ -34,7 +26,3 @@ function! TestRails()
   endif
   execute '!tmux send-keys -t 1 ' . path . ' Enter'
 endfunction
-
-" function! Arrowify()
-"   execute '%s/function/\=Arrow()/gc'
-" endfunction
