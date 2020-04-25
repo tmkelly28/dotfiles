@@ -8,7 +8,32 @@ if [[ ! -f "$LOCAL_VIM_OVERRIDES" ]]; then
   touch $LOCAL_VIM_OVERRIDES
 fi
 
-rm ~/.bash_profile && ln -s ~/dotfiles/.bash_profile ~/.bash_profile
-rm ~/.gitignore_global && ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
-rm ~/.tmux.conf && ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
-rm ~/.config/nvim/init.vim && ln -s ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
+HOME_FILES=(\
+  ".bash_profile" \
+  ".gitignore_global" \
+  ".agignore" \
+  ".tmux.conf")
+
+for f in ${HOME_FILES[@]}; do
+  TARGET="$HOME/$f"
+  SOURCE="$HOME/dotfiles/$f"
+
+  if [[ -f "$TARGET" ]]; then
+    rm $TARGET
+  fi
+
+  ln -s $SOURCE $TARGET
+done
+
+CONFIG_FILES=("nvim/init.vim")
+
+for f in ${CONFIG_FILES[@]}; do
+  TARGET="$HOME/.config/$f"
+  SOURCE="$HOME/dotfiles/$f"
+
+  if [[ -f "$TARGET" ]]; then
+    rm $TARGET
+  fi
+
+  ln -s $SOURCE $TARGET
+done
