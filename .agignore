@@ -1,0 +1,13 @@
+client/paperSnippet/bower_components/
+bundle.js
+bundle.js.map
+client/build/
+client/bower_components/
+node_modules/
+bower_components/
+build.js
+build.js.map
+*.min.js
+*.js.map
+craft/storage
+cache/
