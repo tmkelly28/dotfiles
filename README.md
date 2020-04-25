@@ -12,7 +12,3 @@ The following dependencies will need to be manually installed (until I get motiv
 You'll also want to use a patched nerd font
 
 - https://github.com/ryanoasis/nerd-fonts
-
-Finally, make a `local.vim` file
-
-`touch local.vim`
