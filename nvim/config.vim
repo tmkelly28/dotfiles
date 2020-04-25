@@ -1,11 +1,5 @@
-set nocompatible
 syntax on
 filetype plugin indent on
-if (has("termguicolors"))
-  set termguicolors
-endif
-colorscheme palenight
-highlight NonText ctermfg=bg guifg=bg cterm=NONE gui=NONE
 
 " force sync syntax highlighting in those nasty, large .vue files
 autocmd BufEnter *.vue :syntax sync fromstart
