@@ -2,6 +2,7 @@ source ~/dotfiles/zsh/omz.zsh
 source ~/dotfiles/.zsh_aliases
 source ~/dotfiles/git/gpo.sh
 source ~/dotfiles/git/pretty_git_logs.sh
+source ~/dotfiles/.zsh-local.zsh
 
 export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
 
