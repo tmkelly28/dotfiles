@@ -12,6 +12,7 @@ HOME_FILES=(\
   ".bash_profile" \
   ".gitignore_global" \
   ".agignore" \
+  ".zshrc" \
   ".tmux.conf")
 
 for f in ${HOME_FILES[@]}; do
@@ -25,7 +26,9 @@ for f in ${HOME_FILES[@]}; do
   ln -s $SOURCE $TARGET
 done
 
-CONFIG_FILES=("nvim/init.vim")
+CONFIG_FILES=(\
+  "kitty/kitty.conf" \
+  "nvim/init.vim")
 
 for f in ${CONFIG_FILES[@]}; do
   TARGET="$HOME/.config/$f"
