@@ -1,1 +1,11 @@
 tags
+tags.lock
+tags.temp
+tags.temp.tmp
+tags.temp.*
+.vscode
+.starscope.db
+ruby.db
+ruby_cscope.out
+ruby_tags
+db/seeds/seed_tk.rb
