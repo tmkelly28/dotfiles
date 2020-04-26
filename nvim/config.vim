@@ -4,7 +4,7 @@ filetype plugin indent on
 autocmd BufEnter *.vue :syntax sync fromstart
 
 " use bash aliases from noninteractive shell
-let $BASH_ENV="~/dotfiles/.bash_aliases"
+let $BASH_ENV="~/dotfiles/.zsh_aliases"
 
 """ Configuration
 set path=$PWD/**

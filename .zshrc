@@ -4,6 +4,9 @@ source ~/dotfiles/git/gpo.sh
 source ~/dotfiles/git/pretty_git_logs.sh
 source ~/dotfiles/.zsh-local.zsh
 
+local prompt_jobs="%(1j.%{$fg[green]%}✦%{$reset_color%} .)"
+PROMPT+='${prompt_jobs}'
+
 export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
 
 export GIT_EDITOR='nvim'
