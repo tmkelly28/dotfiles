@@ -25,6 +25,8 @@ On a brand new machine, certain external dependencies will need to be resolved.
   - `brew install --HEAD universal-ctags/universal-ctags/universal-ctags`
 - [Oh My Zsh!](https://ohmyz.sh/)
   - `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+- [Vim Plug](https://github.com/junegunn/vim-plug)
+  - `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
 - [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
   - In particular, I go with [homebrew installation](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts)
 
