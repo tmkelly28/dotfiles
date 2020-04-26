@@ -2,3 +2,4 @@
 tags
 .netrwhist
 nvim/local.vim
+.tmux-local.conf

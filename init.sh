@@ -3,9 +3,14 @@
 set -e
 
 LOCAL_VIM_OVERRIDES=~/dotfiles/nvim/local.vim
+LOCAL_TMUX_OVERRIDES=~/dotfiles/tmux-local.conf
 if [[ ! -f "$LOCAL_VIM_OVERRIDES" ]]; then
   echo "Creating $LOCAL_VIM_OVERRIDES"
   touch $LOCAL_VIM_OVERRIDES
+fi
+if [[ ! -f "$LOCAL_TMUX_OVERRIDES" ]]; then
+  echo "Creating $LOCAL_TMUX_OVERRIDES"
+  touch $LOCAL_TMUX_OVERRIDES
 fi
 
 HOME_FILES=(\
