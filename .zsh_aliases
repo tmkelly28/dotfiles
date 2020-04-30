@@ -1,7 +1,7 @@
 # vim and tmux
 alias v='nvim'
 alias nv='nvim'
-alias dot='nvim ~/dotfiles'
+alias dot='(cd ~/dotfiles && nvim ~/dotfiles)'
 
 # python3
 alias python='python3'

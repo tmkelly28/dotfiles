@@ -8,6 +8,7 @@ local prompt_jobs="%(1j.%{$fg[green]%}✦%{$reset_color%} .)"
 PROMPT+='${prompt_jobs}'
 
 export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
+export KEYTIMEOUT=1 # key timeout for vi-mode
 
 export GIT_EDITOR='nvim'
 export REACT_EDITOR='nvim'
