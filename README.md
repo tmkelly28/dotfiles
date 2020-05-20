@@ -43,4 +43,5 @@ On a brand new machine, certain external dependencies will need to be resolved.
 - `gitignore_global`
 - `agignore`
 - `kitty`
+- `psql`
 - `bash_profile` _(deprecated)_
