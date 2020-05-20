@@ -9,6 +9,7 @@ PROMPT+='${prompt_jobs}'
 
 export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
 export KEYTIMEOUT=1 # key timeout for vi-mode
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 export GIT_EDITOR='nvim'
 export REACT_EDITOR='nvim'

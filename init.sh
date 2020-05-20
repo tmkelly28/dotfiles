@@ -23,6 +23,7 @@ HOME_FILES=(\
   ".gitignore_global" \
   ".agignore" \
   ".zshrc" \
+  ".psqlrc" \
   ".tmux.conf")
 
 for f in ${HOME_FILES[@]}; do
