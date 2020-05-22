@@ -44,6 +44,7 @@ PATH="$HOME/.cargo/bin:$PATH"
 # Python
 PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
 PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
+PATH="/Users/$(whoami)/Library/Python/3.7/bin:${PATH}"
 # Ruby/RVM
 PATH="$PATH:$HOME/.rvm/bin"
 export PATH
