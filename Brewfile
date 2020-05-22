@@ -12,6 +12,7 @@ brew 'universal-ctags'
 tap 'homebrew/cask-fonts'
 
 cask 'font-hack-nerd-font'
+cask 'font-fira-code'
 cask 'java'
 cask 'google-chrome'
 cask 'firefox'
