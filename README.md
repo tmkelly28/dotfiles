@@ -17,8 +17,6 @@ On a brand new machine, certain external dependencies will need to be resolved.
 
 - [Homebrew](https://brew.sh/)
   - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
-- [Ag (the_silver_searcher)](https://github.com/ggreer/the_silver_searcher)
-  - `brew install the_silver_searcher`
 - [starscope](https://github.com/eapache/starscope)
   - `gem install starscope`
 - [Universal Ctags](https://github.com/universal-ctags/homebrew-universal-ctags)
@@ -27,8 +25,6 @@ On a brand new machine, certain external dependencies will need to be resolved.
   - `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 - [Vim Plug](https://github.com/junegunn/vim-plug)
   - `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
-- [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
-  - In particular, I go with [homebrew installation](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts)
 
 ## Usage
 
