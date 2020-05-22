@@ -5,3 +5,4 @@ nvim/local.vim
 .tmux-local.conf
 .zsh-local.zsh
 Brewfile.lock.json
+Gemfile.lock
