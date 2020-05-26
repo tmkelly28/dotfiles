@@ -58,6 +58,13 @@ if [ -f '/Users/$(whoami)/google-cloud-sdk/completion.bash.inc' ]; then . '/User
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# git config
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global core.excludesfile '~/.gitignore_global'
+
 echo -e "\e[36mnode version:\e[0m $(node --version)"
 echo -e "\e[35mruby version:\e[0m $(ruby --version)"
 echo -e "\e[32mpython version:\e[0m $(python --version)"
