@@ -64,6 +64,7 @@ git config --global alias.br branch
 git config --global alias.ci commit
 git config --global alias.st status
 git config --global alias.m merge
+git config --global alias.a add
 git config --global core.excludesfile '~/.gitignore_global'
 
 echo -e "\e[36mnode version:\e[0m $(node --version)"
