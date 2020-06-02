@@ -2,7 +2,6 @@ source ~/dotfiles/zsh/omz.zsh
 source ~/dotfiles/.zsh_aliases
 source ~/dotfiles/git/gpo.sh
 source ~/dotfiles/git/pretty_git_logs.sh
-source ~/dotfiles/.zsh-local.zsh
 
 local prompt_jobs="%(1j.%{$fg[green]%}✦%{$reset_color%} .)"
 PROMPT+='${prompt_jobs}'
@@ -66,6 +65,8 @@ git config --global alias.st status
 git config --global alias.m merge
 git config --global alias.a add
 git config --global core.excludesfile '~/.gitignore_global'
+
+source ~/dotfiles/.zsh-local.zsh
 
 echo -e "\e[36mnode version:\e[0m $(node --version)"
 echo -e "\e[35mruby version:\e[0m $(ruby --version)"
