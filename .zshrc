@@ -23,10 +23,10 @@ export M2_HOME=/usr/local/Cellar/maven/3.5.0/libexec
 export M2=${M2_HOME}/bin
 
 # Path
-PATH="/usr/local/bin:$PATH"
+PATH="/usr/local/bin:${PATH}"
 PATH="${PATH}:~/.vimpkg/bin"
 ## Java/Maven
-PATH="${JAVA_HOME}/bin:$PATH"
+PATH="${JAVA_HOME}/bin:${PATH}"
 PATH="${PATH}:${M2_HOME}/bin"
 # Postgres
 PATH="${PATH}:/Applications/Postgres.app/Contents/Versions/latest/bin"
@@ -37,15 +37,15 @@ PATH="${PATH}:${ANDROID_HOME}/tools"
 # Go
 PATH="${PATH}:/Users/$(whoami)/go/bin"
 # MongoDb
-PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
+PATH="/usr/local/opt/mongodb@3.4/bin:${PATH}"
 # Rust/Cargo
-PATH="$HOME/.cargo/bin:$PATH"
+PATH="${HOME}/.cargo/bin:${PATH}"
 # Python
 PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
 PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
 PATH="/Users/$(whoami)/Library/Python/3.7/bin:${PATH}"
 # Ruby/RVM
-PATH="$PATH:$HOME/.rvm/bin"
+PATH="${PATH}:${HOME}/.rvm/bin"
 export PATH
 
 # The next line updates PATH for the Google Cloud SDK.
