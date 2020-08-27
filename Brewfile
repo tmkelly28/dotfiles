@@ -8,6 +8,7 @@ brew 'bat'
 brew 'htop'
 brew 'git-crypt'
 brew 'universal-ctags'
+brew 'jq'
 
 tap 'homebrew/cask-fonts'
 
