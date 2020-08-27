@@ -69,3 +69,7 @@ vnoremap <silent> # :<C-U>
   \gvy?<C-R><C-R>=substitute(
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
+
+" Next and previous tag
+nnoremap t] :tnext<cr>
+nnoremap t[ :tprevious<cr>
