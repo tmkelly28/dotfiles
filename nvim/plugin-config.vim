@@ -41,6 +41,7 @@ let g:ale_linters = {
       \ 'javascript': ['eslint'],
       \ 'vue': ['eslint'],
       \ 'ruby': ['rubocop'],
+      \ 'bash': ['shellcheck'],
       \ }
 
 " ultisnips
