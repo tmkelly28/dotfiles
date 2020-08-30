@@ -26,6 +26,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-rbenv'
 Plug 'vim-ruby/vim-ruby'
 
 " Utilities
