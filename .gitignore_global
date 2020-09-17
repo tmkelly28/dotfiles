@@ -8,5 +8,4 @@ tags.temp.*
 ruby.db
 ruby_cscope.out
 ruby_tags
-db/seeds/seed_tk.rb
-db/seeds/seed_tk_*.rb
+db/seeds/tk_*.rb
