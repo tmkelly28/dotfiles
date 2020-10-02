@@ -2,6 +2,7 @@ source ~/dotfiles/zsh/omz.zsh
 source ~/dotfiles/.zsh_aliases
 source ~/dotfiles/git/gpo.sh
 source ~/dotfiles/git/pretty_git_logs.sh
+source ~/dotfiles/git/open_where_regex.sh
 
 local prompt_jobs="%(1j.%{$fg[green]%}✦%{$reset_color%} .)"
 PROMPT+='${prompt_jobs}'
