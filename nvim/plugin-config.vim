@@ -1,7 +1,12 @@
 " fzf
 set rtp+=/usr/local/opt/fzf
-nnoremap F :FZF<CR>
+nnoremap F :Files<CR>
 nnoremap <C-p> :FZF<CR>
+command! -bang -nargs=* GGrep
+  \ call fzf#vim#grep(
+  \   'git grep --line-number -- '.shellescape(<q-args>), 0,
+  \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
+
 " NerdTree
 autocmd StdinReadPre * let s:std_in=1
 
