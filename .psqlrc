@@ -1,1 +1,3 @@
 \x auto
+\set HISTCONTROL ignoredups
+\pset null '[NULL]'

@@ -73,3 +73,6 @@ vnoremap <silent> # :<C-U>
 " Next and previous tag
 nnoremap t] :tnext<cr>
 nnoremap t[ :tprevious<cr>
+
+" Execute current script
+nnoremap <leader>r :!%:p<cr>

@@ -70,6 +70,10 @@ git config --global core.excludesfile '~/.gitignore_global'
 
 source ~/dotfiles/.zsh-local.zsh
 
+scm() {
+    scheme --quiet < "$1"
+}
+
 echo -e "\e[36mnode version:\e[0m $(node --version)"
 echo -e "\e[35mruby version:\e[0m $(ruby --version)"
 echo -e "\e[32mpython version:\e[0m $(python --version)"
