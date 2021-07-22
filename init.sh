@@ -39,6 +39,8 @@ done
 
 CONFIG_FILES=(\
   "kitty/kitty.conf" \
+  "kitty/palenight.conf" \
+  "kitty/iceberg.conf" \
   "nvim/init.vim")
 
 for f in ${CONFIG_FILES[@]}; do
