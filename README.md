@@ -26,6 +26,7 @@ On a brand new machine, certain external dependencies will need to be resolved.
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
 - [Node](https://nodejs.org/en/)
+- [Go](https://golang.org/)
 - [Postgres.app](https://postgresapp.com/)
 
 ## Usage
