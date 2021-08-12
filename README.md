@@ -12,7 +12,7 @@ Hi - my name's Tom, and these are my dotfiles. Feel free to dive in and see if t
 - Multiplexer: [tmux](https://github.com/tmux/tmux)
 
 ## Github
-- On a brand new machine, [generate a new ssh key and add it to Github](- generate new ssh key: https://docs.github.com/en/enterprise-server@3.0/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+- On a brand new machine, [generate a new ssh key and add it to Github](https://docs.github.com/en/enterprise-server@3.0/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 - create a .ssh/config
 
 ```
