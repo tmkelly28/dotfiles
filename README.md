@@ -19,7 +19,7 @@ Hi - my name's Tom, and these are my dotfiles. Feel free to dive in and see if t
 Host *
  AddKeysToAgent yes
  UseKeychain yes
- IdentityFile ~/.ssh/<id_rsa>
+ IdentityFile ~/.ssh/<id_whatever>
 ```
 
 ## Manual Installs
