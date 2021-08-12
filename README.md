@@ -23,9 +23,11 @@ Host *
 ```
 
 ## Manual Installs
+- [GPG Tools](https://gpgtools.org/)
 - [Homebrew](https://brew.sh/)
 - [Oh My Zsh!](https://ohmyz.sh/)
 - [Vim Plug](https://github.com/junegunn/vim-plug)
+- [RVM](https://rvm.io/)
 - [Java](https://www.java.com/en/)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
 - [Node](https://nodejs.org/en/)
