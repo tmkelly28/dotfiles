@@ -11,23 +11,27 @@ Hi - my name's Tom, and these are my dotfiles. Feel free to dive in and see if t
 - Editor: [nvim](https://neovim.io/)
 - Multiplexer: [tmux](https://github.com/tmux/tmux)
 
-## Dependencies
+## Github
+- On a brand new machine, [generate a new ssh key and add it to Github](- generate new ssh key: https://docs.github.com/en/enterprise-server@3.0/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+- create a .ssh/config
 
-On a brand new machine, certain external dependencies will need to be resolved.
+```
+Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/<id_rsa>
+```
 
+## Manual Installs
 - [Homebrew](https://brew.sh/)
-  - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 - [Oh My Zsh!](https://ohmyz.sh/)
-  - `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 - [Vim Plug](https://github.com/junegunn/vim-plug)
-  - `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
-
-## Other Manual Installs
-
+- [Java](https://www.java.com/en/)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
 - [Node](https://nodejs.org/en/)
 - [Go](https://golang.org/)
 - [Postgres.app](https://postgresapp.com/)
+- [Postico](https://eggerapps.at/postico/)
 
 ## Usage
 
