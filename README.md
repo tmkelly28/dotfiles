@@ -42,7 +42,7 @@ Host *
 - `bundle install`
 - Execute `init.sh`: this creates symlinks in the `~` and `~/.config` directories, where appropriate
   - This needs to be repeated whenever a new root dotfile is added.
-- `npm install -g vls typescript-language-server
+- `npm install -g neovim vls typescript-language-server`
 - `python3 -m pip install --user --upgrade pynvim`
 - `python2 -m pip install --user --upgrade pynvim`
 - Open an `nvim` buffer
