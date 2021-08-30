@@ -34,7 +34,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Utilities
 Plug 'Raimondi/delimitMate'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ludovicchabant/vim-gutentags'

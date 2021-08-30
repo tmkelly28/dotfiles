@@ -50,9 +50,9 @@ let g:ale_linters = {
       \ }
 
 " ultisnips
-let g:UltiSnipsExpandTrigger="<c-b>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" let g:UltiSnipsExpandTrigger="<c-b>"
+" let g:UltiSnipsJumpForwardTrigger="<c-b>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " deoplete
 let g:deoplete#enable_at_startup = 0 " disabled for now; migrating to coc
