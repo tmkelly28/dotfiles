@@ -71,7 +71,7 @@ let g:markdown_fenced_languages = ['html', 'css', 'javascript', 'json', 'ruby', 
 "   install language server: `npm i -g javascript-typescript-langserver`
 "   This should create a symlink for /usr/local/bin/javascript-typescript-stdio
 " vuejs
-"   install language server: `npm i -g vue-language-server`
+"   install language server: `npm i -g vls`
 "   This should create a symlink for /usr/local/bin/vls
 let g:LanguageClient_serverCommands = {
     \ 'ruby': ['~/.rvm/gems/ruby-2.6.5/bin/solargraph', 'stdio'],
