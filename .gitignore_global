@@ -10,3 +10,4 @@ ruby_cscope.out
 ruby_tags
 db/seeds/tk_*.rb
 .env.release-notes-generator
+.DS_Store
