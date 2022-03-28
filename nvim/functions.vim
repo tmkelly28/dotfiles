@@ -13,7 +13,7 @@ function! Fix()
 endfunction
 
 function! JSON()
-  execute '%!python -m json.tool'
+  execute '%!python3 -m json.tool'
 endfunction
 
 function! TestRails()
@@ -25,4 +25,11 @@ function! TestRails()
     let path = '"./bin/rspec' . ' ' . path . '_spec.rb"'
   endif
   execute '!tmux send-keys -t 1 ' . path . ' Enter'
+endfunction
+
+function! MakeSpec()
+  let path = expand('%:r')
+  let path = substitute(path, '^app', 'spec', '')
+  let path = path . '_spec.rb'
+  execute '!touch ' . path
 endfunction
