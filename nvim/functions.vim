@@ -33,3 +33,9 @@ function! MakeSpec()
   let path = path . '_spec.rb'
   execute '!touch ' . path
 endfunction
+
+function! ExecuteCFile()
+  let path = expand('%:r')
+  let cmd = '"cc' . ' ./' . path . '.c ' . '&&' . ' ./' . 'a.out"'
+  execute '!tmux send-keys -t 1 ' . cmd . ' Enter'
+endfunction

@@ -24,6 +24,9 @@ export ANDROID_HOME=~/Library/Android/sdk
 export M2_HOME=/usr/local/Cellar/maven/3.5.0/libexec
 export M2=${M2_HOME}/bin
 
+export PYSPARK_PYTHON=~/opt/miniconda3/bin/python
+export PYSPARK_DRIVER_PYTHON=~/opt/miniconda3/bin/python
+
 # Path
 PATH="/usr/local/bin:${PATH}"
 PATH="${PATH}:~/.vimpkg/bin"
@@ -43,9 +46,9 @@ PATH="/usr/local/opt/mongodb@3.4/bin:${PATH}"
 # Rust/Cargo
 PATH="${HOME}/.cargo/bin:${PATH}"
 # Python
-PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
-PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
-PATH="/Users/$(whoami)/Library/Python/3.7/bin:${PATH}"
+# PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
+# PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
+# PATH="/Users/$(whoami)/Library/Python/3.7/bin:${PATH}"
 # Ruby/RVM
 PATH="${PATH}:${HOME}/.rvm/bin"
 export PATH
@@ -77,3 +80,19 @@ scm() {
 echo -e "\e[36mnode version:\e[0m $(node --version)"
 echo -e "\e[35mruby version:\e[0m $(ruby --version)"
 echo -e "\e[32mpython version:\e[0m $(python --version)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/tom/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/tom/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/tom/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/tom/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

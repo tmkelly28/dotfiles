@@ -32,6 +32,7 @@ Host *
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
 - [Node](https://nodejs.org/en/)
 - [Go](https://golang.org/)
+- [Rust](https://www.rust-lang.org/tools/install)
 - [Postgres.app](https://postgresapp.com/)
 - [Postico](https://eggerapps.at/postico/)
 

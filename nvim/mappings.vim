@@ -55,6 +55,9 @@ vnoremap <C-f> y:GGrep <C-r>=fnameescape(@")<CR><CR>
 " Testing in Rails
 nnoremap <leader>t :call TestRails()<cr>
 
+" Test a C file
+nnoremap <leader>c :call ExecuteCFile()<cr>
+
 " allow the . to execute once for each line of a visual selection
 vnoremap . :normal .<CR>
 

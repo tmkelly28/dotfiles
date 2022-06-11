@@ -4,7 +4,8 @@ alias nv='nvim'
 alias dot='(cd ~/dotfiles && nvim ~/dotfiles)'
 
 # python3
-alias python='python3'
+# alias python='python3'
+alias python=~/opt/miniconda3/bin/python
 
 # shortcuts
 alias c='clear'
@@ -21,3 +22,6 @@ alias gb="git branch | grep -v 'zz-'" # I prefix stale branches I want to keep w
 alias gdiff='git diff staging...HEAD'
 alias gl='pretty_git_log'
 alias gv='git diff --name-only | uniq | xargs nvim'
+
+alias lorem='cat ~/dotfiles/placeholders/lorem.txt | pbcopy'
+alias hipsum='cat ~/dotfiles/placeholders/hipsum.txt | pbcopy'

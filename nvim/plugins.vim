@@ -58,9 +58,9 @@ Plug 'w0rp/ale'
 Plug 'neoclide/coc.nvim', {
       \ 'branch': 'release',
       \ }
-Plug 'autozimu/LanguageClient-neovim', {
-      \ 'branch': 'next',
-      \ 'do': 'bash install.sh',
-      \ }
+" Plug 'autozimu/LanguageClient-neovim', {
+"       \ 'branch': 'next',
+"       \ 'do': 'bash install.sh',
+"       \ }
 
 call plug#end()

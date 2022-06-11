@@ -11,3 +11,4 @@ ruby_tags
 db/seeds/tk_*.rb
 .env.release-notes-generator
 .DS_Store
+tmux-client-*
