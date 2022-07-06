@@ -48,7 +48,7 @@ Host *
 - `python2 -m pip install --user --upgrade pynvim`
 - Open an `nvim` buffer
   - `:PlugInstall`
-  - `:CocInstall coc-tsserver coc-json coc-html coc-css coc-solargraph coc-vetur`
+  - `:CocInstall coc-tsserver coc-json coc-html coc-css coc-solargraph coc-vetur coc-python`
 
 ## Current Dotfiles
 - `zsh`

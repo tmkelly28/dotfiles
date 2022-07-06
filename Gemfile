@@ -5,6 +5,7 @@ ruby '2.6.9'
 
 gem 'gem-ctags'
 gem 'neovim'
+gem 'ripper-tags'
 gem 'rubocop', '~> 1.17'
 gem 'rubocop-rspec'
 gem 'solargraph'

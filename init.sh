@@ -31,10 +31,10 @@ for f in ${HOME_FILES[@]}; do
   SOURCE="$HOME/dotfiles/$f"
 
   if [[ -f "$TARGET" ]]; then
-    rm $TARGET
+    rm "$TARGET"
   fi
 
-  ln -s $SOURCE $TARGET
+  ln -s "$SOURCE" "$TARGET"
 done
 
 CONFIG_FILES=(\
@@ -48,8 +48,8 @@ for f in ${CONFIG_FILES[@]}; do
   SOURCE="$HOME/dotfiles/$f"
 
   if [[ -f "$TARGET" ]]; then
-    rm $TARGET
+    rm "$TARGET"
   fi
 
-  ln -s $SOURCE $TARGET
+  ln -s "$SOURCE" "$TARGET"
 done

@@ -117,6 +117,10 @@ function! s:show_documentation()
   endif
 endfunction
 
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
 let g:ascii = [
       \ '              .--~~,__  ',
       \ ' :-....,-------`~~`._.` ',
@@ -136,9 +140,16 @@ let g:gutentags_generate_on_missing = 1
 let g:gutentags_generate_on_write = 1
 let g:gutentags_generate_on_empty_buffer = 0
 
+" https://stackoverflow.com/questions/43666122/ctags-and-ruby-modules-in-vim
+" https://github.com/ludovicchabant/vim-gutentags/issues/87
+" let g:gutentags_ctags_executable_ruby = 'ripper-tags'
+" let g:gutentags_ctags_extra_args = ['--ignore-unsupported-options', '--recursive', '--extra=1']
+
+
 let g:gutentags_ctags_extra_args = [
       \ '--tag-relative=yes',
       \ '--fields=+ailmnS',
+      \ '--extras=+q',
       \ ]
 
 let g:gutentags_ctags_exclude = [

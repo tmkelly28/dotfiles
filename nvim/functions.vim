@@ -27,6 +27,18 @@ function! TestRails()
   execute '!tmux send-keys -t 1 ' . path . ' Enter'
 endfunction
 
+function! TestLineInSpec()
+  let path = expand('%:r')
+  let path = substitute(path, '^app', 'spec', '')
+  let lineno = line(".")
+  if path[-4:-1] == 'spec'
+    let path = '"./bin/rspec' . ' ' . path . '.rb:"' . lineno
+  else
+    let path = '"./bin/rspec' . ' ' . path . '_spec.rb:"' . lineno
+  endif
+  execute '!tmux send-keys -t 1 ' . path . ' Enter'
+endfunction
+
 function! MakeSpec()
   let path = expand('%:r')
   let path = substitute(path, '^app', 'spec', '')
