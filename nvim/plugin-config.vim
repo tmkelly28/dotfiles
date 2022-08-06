@@ -60,11 +60,6 @@ let g:ale_linters = {
 " let g:UltiSnipsJumpForwardTrigger="<c-b>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-" deoplete
-let g:deoplete#enable_at_startup = 0 " disabled for now; migrating to coc
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
 " markdown
 let g:markdown_fenced_languages = ['html', 'css', 'javascript', 'json', 'ruby', 'python']
 
@@ -120,6 +115,9 @@ endfunction
 " Formatting selected code.
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+
+inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 
 let g:ascii = [
       \ '              .--~~,__  ',

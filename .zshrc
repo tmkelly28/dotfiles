@@ -51,6 +51,7 @@ PATH="${HOME}/.cargo/bin:${PATH}"
 # PATH="/Users/$(whoami)/Library/Python/3.7/bin:${PATH}"
 # Ruby/RVM
 PATH="${PATH}:${HOME}/.rvm/bin"
+PATH="${PATH}:/usr/local/mysql/bin"
 export PATH
 
 # The next line updates PATH for the Google Cloud SDK.
