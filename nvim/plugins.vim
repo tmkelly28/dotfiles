@@ -13,6 +13,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Language
 Plug 'ElmCast/elm-vim'
@@ -51,6 +52,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'w0rp/ale'
+Plug 'dbeniamine/cheat.sh-vim'
 
 " Coc
 " After installing coc for the first time, you need to install the

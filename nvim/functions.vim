@@ -16,6 +16,14 @@ function! JSON()
   execute '%!python3 -m json.tool'
 endfunction
 
+function! Test()
+  if &filetype == 'ruby'
+    call TestRails()
+  elseif &filetype == 'python'
+    call TestPython()
+  endif
+endfunction
+
 function! TestRails()
   let path = expand('%:r')
   let path = substitute(path, '^app', 'spec', '')
@@ -23,6 +31,22 @@ function! TestRails()
     let path = '"./bin/rspec' . ' ' . path . '.rb"'
   else
     let path = '"./bin/rspec' . ' ' . path . '_spec.rb"'
+  endif
+  execute '!tmux send-keys -t 1 ' . path . ' Enter'
+endfunction
+
+function! TestPython()
+  let path = split(expand('%:r'), '/')
+  let is_test = path[0] == 'tests'
+  if is_test
+    let path = join(path, '/')
+    " if we are already in a test file
+    let path = '"etltest' . ' ./' . path . '.py"'
+  else
+    " if we are in the source file
+    let path[-1] = 'test_' . path[-1]
+    let path = join(path, '/')
+    let path = '"etltest' . ' ./tests/' . path . '.py"'
   endif
   execute '!tmux send-keys -t 1 ' . path . ' Enter'
 endfunction

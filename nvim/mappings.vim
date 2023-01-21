@@ -53,7 +53,7 @@ nnoremap <C-f> :exe 'GGrep' expand('<cword>')<cr>
 vnoremap <C-f> y:GGrep <C-r>=fnameescape(@")<CR><CR>
 
 " Testing in Rails
-nnoremap <leader>t :call TestRails()<cr>
+nnoremap <leader>t :call Test()<cr>
 nnoremap <leader>T :call TestLineInSpec()<cr>
 
 " Test a C file
