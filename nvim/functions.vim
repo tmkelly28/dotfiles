@@ -75,3 +75,11 @@ function! ExecuteCFile()
   let cmd = '"cc' . ' ./' . path . '.c ' . '&&' . ' ./' . 'a.out"'
   execute '!tmux send-keys -t 1 ' . cmd . ' Enter'
 endfunction
+
+function! ExecuteScript()
+  let path = expand('%:f')
+  let prog = &filetype
+  let cmd = '"' . prog .  ' ./' . path . '"'
+  echo cmd
+  execute '!tmux send-keys -t 1 ' . cmd . ' Enter'
+endfunction

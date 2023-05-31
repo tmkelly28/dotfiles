@@ -59,6 +59,9 @@ nnoremap <leader>T :call TestLineInSpec()<cr>
 " Test a C file
 nnoremap <leader>c :call ExecuteCFile()<cr>
 
+" Test a script file
+nnoremap <leader>e :call ExecuteScript()<cr>
+
 " JSON format
 nnoremap <leader>j :call JSON()<cr>
 
