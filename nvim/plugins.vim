@@ -13,7 +13,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Language
 Plug 'ElmCast/elm-vim'
@@ -51,7 +51,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'andrewradev/splitjoin.vim'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'dbeniamine/cheat.sh-vim'
 
 " Coc

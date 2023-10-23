@@ -55,6 +55,7 @@ vnoremap <C-f> y:GGrep <C-r>=fnameescape(@")<CR><CR>
 " Testing in Rails
 nnoremap <leader>t :call Test()<cr>
 nnoremap <leader>T :call TestLineInSpec()<cr>
+nnoremap <leader>R :call SendRubocop()<cr>
 
 " Test a C file
 nnoremap <leader>c :call ExecuteCFile()<cr>

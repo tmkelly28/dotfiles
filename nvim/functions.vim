@@ -83,3 +83,9 @@ function! ExecuteScript()
   echo cmd
   execute '!tmux send-keys -t 1 ' . cmd . ' Enter'
 endfunction
+
+function! SendRubocop()
+  let path = expand('%:r')
+  let cmd = '"rubocop -A ' . ' ./' . path . '.rb"'
+  execute '!tmux send-keys -t 1 ' . cmd . ' Enter'
+endfunction
