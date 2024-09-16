@@ -25,13 +25,16 @@ function! Test()
 endfunction
 
 function! TestRails()
+  let pwd = trim(execute('pwd'))
   let path = expand('%:r')
   let path = substitute(path, '^app', 'spec', '')
+  let path = substitute(path, '^' . pwd . '/', '', '')
   if path[-4:-1] == 'spec'
     let path = '"./bin/rspec' . ' ' . path . '.rb"'
   else
     let path = '"./bin/rspec' . ' ' . path . '_spec.rb"'
   endif
+  echo path
   execute '!tmux send-keys -t 1 ' . path . ' Enter'
 endfunction
 

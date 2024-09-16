@@ -53,6 +53,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'dense-analysis/ale'
 Plug 'dbeniamine/cheat.sh-vim'
+Plug 'github/copilot.vim'
 
 " Coc
 " After installing coc for the first time, you need to install the
