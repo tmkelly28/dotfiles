@@ -43,8 +43,8 @@ CONFIG_FILES=(\
   "kitty/iceberg.conf" \
   "nvim/init.vim")
 
-mkdir ~/.config/kitty
-mkdir ~/.config/nvim
+mkdir -p ~/.config/kitty
+mkdir -p ~/.config/nvim
 for f in ${CONFIG_FILES[@]}; do
   TARGET="$HOME/.config/$f"
   SOURCE="$HOME/dotfiles/$f"
