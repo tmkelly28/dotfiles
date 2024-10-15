@@ -27,25 +27,22 @@ Host *
 - [Homebrew](https://brew.sh/)
 - [Oh My Zsh!](https://ohmyz.sh/)
 - [Vim Plug](https://github.com/junegunn/vim-plug)
-- [RVM](https://rvm.io/)
-- [Java](https://www.java.com/en/)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
 - [Node](https://nodejs.org/en/)
 - [Go](https://golang.org/)
 - [Rust](https://www.rust-lang.org/tools/install)
 - [Postgres.app](https://postgresapp.com/)
 - [Postico](https://eggerapps.at/postico/)
+- [Iterm2](https://iterm2.com/)
 
 ## Usage
 
 - Clone this repository to your home directory
 - `brew bundle`
-- `bundle install`
 - Execute `init.sh`: this creates symlinks in the `~` and `~/.config` directories, where appropriate
   - This needs to be repeated whenever a new root dotfile is added.
-- `npm install -g yarn neovim vls typescript-language-server`
+- `npm install -g yarn neovim typescript-language-server`
 - `python3 -m pip install --user --upgrade pynvim`
-- `python2 -m pip install --user --upgrade pynvim`
 - Open an `nvim` buffer
   - `:PlugInstall`
   - `:CocInstall coc-tsserver coc-json coc-html coc-css coc-solargraph coc-vetur coc-python`
@@ -62,4 +59,3 @@ Host *
 
 ## Package Managers
 - `brew`
-- `bundle`
