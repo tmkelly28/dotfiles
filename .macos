@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+defaults write com.apple.dock "mru-spaces" -bool false; killall Dock
+
+# Todo
+# System Settings > Keyboard > Modifier Keys > Change Caps Lock to Control
+
