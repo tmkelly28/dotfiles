@@ -58,7 +58,7 @@ Plug 'github/copilot.vim'
 " Coc
 " After installing coc for the first time, you need to install the
 " various language plugins:
-" :CocInstall coc-tsserver coc-json coc-html coc-css coc-solargraph coc-vetur
+" :CocInstall coc-tsserver coc-json coc-html coc-css coc-solargraph coc-go
 Plug 'neoclide/coc.nvim', {
       \ 'branch': 'release',
       \ }
