@@ -72,9 +72,10 @@ scm() {
     scheme --quiet < "$1"
 }
 
-echo -e "\e[36mnode version:\e[0m $(node --version)"
+echo -e "\e[34mnode version:\e[0m $(node --version)"
 echo -e "\e[35mruby version:\e[0m $(ruby --version)"
 echo -e "\e[32mpython version:\e[0m $(python3 --version)"
+echo -e "\e[36mgo version:\e[0m $(go version)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
