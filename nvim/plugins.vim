@@ -54,6 +54,8 @@ Plug 'andrewradev/splitjoin.vim'
 Plug 'dense-analysis/ale'
 Plug 'dbeniamine/cheat.sh-vim'
 Plug 'github/copilot.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
 
 " Coc
 " After installing coc for the first time, you need to install the

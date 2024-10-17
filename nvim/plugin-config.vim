@@ -120,6 +120,7 @@ inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>
 " Use Shift-Tab to accept Copilot's suggestions
 inoremap <silent><script><expr> <S-Tab> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
+nnoremap cp :CopilotChat 
 
 let g:ascii = [
       \ '              .--~~,__  ',
