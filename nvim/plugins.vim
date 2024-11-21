@@ -53,9 +53,21 @@ Plug 'tpope/vim-unimpaired'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'dense-analysis/ale'
 Plug 'dbeniamine/cheat.sh-vim'
+
+" Copilot
 Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
+
+Plug 'stevearc/dressing.nvim'
+Plug 'MunifTanjim/nui.nvim'
+
+" Optional deps
+Plug 'nvim-tree/nvim-web-devicons' "or Plug 'echasnovski/mini.icons'
+Plug 'HakonHarnes/img-clip.nvim'
+Plug 'zbirenbaum/copilot.lua'
+
+Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
 
 " Coc
 " After installing coc for the first time, you need to install the

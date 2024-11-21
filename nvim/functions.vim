@@ -21,7 +21,21 @@ function! Test()
     call TestRails()
   elseif &filetype == 'python'
     call TestPython()
+  elseif &filetype == 'go'
+    call TestGo()
   endif
+endfunction
+
+function! TestGo()
+  let pwd = trim(execute('pwd'))
+  let path = expand('%:r')
+  if path[-4:-1] == 'test'
+    let path = '"go test' . ' ' . path . '.go"'
+  else
+    let path = '"go test' . ' ' . path . '_test.go"'
+  endif
+  echo path
+  execute '!tmux send-keys -t 1 ' . path . ' Enter'
 endfunction
 
 function! TestRails()

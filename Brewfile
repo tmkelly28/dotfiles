@@ -13,6 +13,7 @@ brew 'jq'
 brew 'lazydocker'
 brew 'k9s'
 brew 'openjdk'
+brew 'steampipe'
 
 cask 'font-hack-nerd-font'
 cask 'font-fira-code'
