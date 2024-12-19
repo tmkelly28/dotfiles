@@ -13,3 +13,11 @@ require('avante').setup ({
   provider = 'copilot', -- claude, copilot
   auto_suggestions_provider = "copilot"
 })
+
+require('pairs'):setup(
+  {
+    indent = {
+      python = 0,
+    }
+  }
+)
