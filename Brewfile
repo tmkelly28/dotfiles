@@ -14,6 +14,7 @@ brew 'lazydocker'
 brew 'k9s'
 brew 'openjdk'
 brew 'steampipe'
+brew 'luarocks'
 
 cask 'font-hack-nerd-font'
 cask 'font-fira-code'
