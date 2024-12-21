@@ -55,3 +55,6 @@ for f in ${CONFIG_FILES[@]}; do
 
   ln -s "$SOURCE" "$TARGET"
 done
+
+
+ln -s ~/dotfiles/nvim/lua ~/.config/nvim/lua

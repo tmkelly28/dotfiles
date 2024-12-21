@@ -28,8 +28,8 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore=['.git$','.DS_Store', 'tags$', '__pycache__']
 
 " Vim-Airline
-let g:airline#extensions#tabline#enabled=1
-let g:airline_powerline_fonts=1
+" let g:airline#extensions#tabline#enabled=1
+" let g:airline_powerline_fonts=1
 
 " The Silver Searcher
 if executable('ag')
@@ -84,7 +84,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 " Better display for messages
 set cmdheight=2
 
@@ -121,6 +121,8 @@ inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>
 inoremap <silent><script><expr> <S-Tab> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
 nnoremap cp :CopilotChat 
+
+nnoremap <leader>? :CodeCompanionChat<CR>
 
 let g:ascii = [
       \ '              .--~~,__  ',
