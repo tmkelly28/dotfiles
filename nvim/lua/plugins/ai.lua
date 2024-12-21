@@ -1,4 +1,5 @@
 return {
+  {'github/copilot.vim'},
   {"zbirenbaum/copilot.lua"},
   {
     "olimorris/codecompanion.nvim",
@@ -8,7 +9,6 @@ return {
     },
     config = true
   },
-  { "MeanderingProgrammer/render-markdown.nvim", ft = { "markdown", "codecompanion" } },
   -- {
   --   "yetone/avante.nvim",
   --   event = "VeryLazy",

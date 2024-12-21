@@ -13,7 +13,6 @@ autocmd StdinReadPre * let s:std_in=1
 " Open NERDTREE when vim opens
 autocmd VimEnter *
             \   if !argc()
-            \ |   Startify
             \ |   NERDTree
             \ |   wincmd w
             \ | endif
@@ -54,11 +53,6 @@ let g:ale_linters = {
       \ 'ruby': ['rubocop'],
       \ 'bash': ['shellcheck'],
       \ }
-
-" ultisnips
-" let g:UltiSnipsExpandTrigger="<c-b>"
-" let g:UltiSnipsJumpForwardTrigger="<c-b>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " markdown
 let g:markdown_fenced_languages = ['html', 'css', 'javascript', 'json', 'ruby', 'python']
@@ -123,18 +117,6 @@ let g:copilot_no_tab_map = v:true
 nnoremap cp :CopilotChat 
 
 nnoremap <leader>? :CodeCompanionChat<CR>
-
-let g:ascii = [
-      \ '              .--~~,__  ',
-      \ ' :-....,-------`~~`._.` ',
-      \ '  `-,,,  ,_      ;`~U`  ',
-      \ '   _,-` ,``-__; `--.    ',
-      \ '  (_/`~~      ````(;    ',
-      \ '                        '
-      \]
-
-let g:startify_custom_header =
-      \ 'startify#pad(g:ascii + startify#fortune#boxed())'
 
 " Gutentags
 " https://www.reddit.com/r/vim/comments/d77t6j/guide_how_to_setup_ctags_with_gutentags_properly/
