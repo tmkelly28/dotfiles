@@ -12,7 +12,7 @@ return {
       window = {
         layout = "vertical",
         width = 0.4,
-        height = 0.4,
+        height = 1,
       },
       mappings = {
         reset = {
