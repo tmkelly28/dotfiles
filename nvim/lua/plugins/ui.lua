@@ -20,5 +20,11 @@ return {
     dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
   {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
-  { "MeanderingProgrammer/render-markdown.nvim", ft = { "markdown", "codecompanion" } },
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    opts = {
+      file_types = { "markdown", "Avante", "copilot-chat" },
+    },
+    ft = { "markdown", "codecompanion", "Avante", "copilot-chat" }
+  },
 }

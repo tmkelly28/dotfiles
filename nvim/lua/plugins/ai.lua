@@ -2,20 +2,69 @@ return {
   {'github/copilot.vim'},
   {"zbirenbaum/copilot.lua"},
   {
-    "olimorris/codecompanion.nvim",
+    "CopilotC-Nvim/CopilotChat.nvim",
     dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
+      { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
+      { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
     },
-    config = true
+    build = "make tiktoken", -- Only on MacOS or Linux
+    opts = {
+      window = {
+        layout = "vertical",
+        width = 0.4,
+        height = 0.4,
+      },
+      mappings = {
+        reset = {
+          normal = "<C-r>",
+          insert = "<C-r>",
+        },
+      },
+    },
+    -- See Commands section for default commands if you want to lazy load on them
   },
   -- {
+  --   "olimorris/codecompanion.nvim",
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-treesitter/nvim-treesitter",
+  --     { 'github/copilot.vim', cmd = 'Copilot' },
+  --   },
+  --   config = function()
+  --     require('codecompanion').setup({
+  --       opts = {
+  --         strategies = {
+  --           chat = {
+  --             adapter = 'copilot',
+  --           },
+  --           inline = {
+  --             adapter = 'copilot',
+  --           },
+  --           agent = {
+  --             adapter = 'copilot',
+  --           },
+  --         },
+  --       },
+  --       adapters = {
+  --         copilot = function() return require('codecompanion.adapters').extend('copilot', {}) end,
+  --       },
+  --     })
+  --   end,
+  -- },
+  -- {
   --   "yetone/avante.nvim",
+  --   config = function()
+  --     require('avante_lib').load()
+  --     require('avante').setup({
+  --       provider = 'copilot', -- claude, copilot
+  --       auto_suggestions_provider = "copilot"
+  --     })
+  --   end,
   --   event = "VeryLazy",
   --   lazy = false,
   --   version = false, -- set this if you want to always pull the latest change
   --   opts = {
-  --     -- add any opts here
+  --     -- provier = "copilot",
   --   },
   --   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   --   build = "make",
@@ -46,12 +95,11 @@ return {
   --       },
   --     },
   --     {
-  --       -- Make sure to set this up properly if you have lazy=true
-  --       'MeanderingProgrammer/render-markdown.nvim',
+  --       "MeanderingProgrammer/render-markdown.nvim",
   --       opts = {
   --         file_types = { "markdown", "Avante" },
   --       },
-  --       ft = { "markdown", "Avante" },
+  --       ft = { "markdown", "codecompanion", "Avante" }
   --     },
   --   },
   -- }

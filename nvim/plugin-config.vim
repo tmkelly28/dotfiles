@@ -114,9 +114,9 @@ inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>
 " Use Shift-Tab to accept Copilot's suggestions
 inoremap <silent><script><expr> <S-Tab> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
-nnoremap cp :CopilotChat 
+nnoremap cp :CopilotChat
 
-nnoremap <leader>? :CodeCompanionChat<CR>
+nnoremap <leader>? :CopilotChatToggle<CR>
 
 " Gutentags
 " https://www.reddit.com/r/vim/comments/d77t6j/guide_how_to_setup_ctags_with_gutentags_properly/

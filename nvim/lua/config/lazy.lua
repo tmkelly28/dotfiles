@@ -48,25 +48,30 @@ require('render-markdown').setup()
 require('copilot').setup()
 
 -- require('avante_lib').load()
--- require('avante').setup ({
+-- require('avante').setup({
 --   provider = 'copilot', -- claude, copilot
 --   auto_suggestions_provider = "copilot"
 -- })
-require('codecompanion').setup(
-  {
-    strategies = {
-      chat = {
-        adapter = "copilot",
-      },
-      inline = {
-        adapter = "copilot",
-      },
-      agent = {
-        adapter = "copilot",
-      },
-    },
-  }
-)
+-- require('codecompanion').setup(
+--   {
+--     opts = {
+--       strategies = {
+--         chat = {
+--           adapter = "copilot",
+--         },
+--         inline = {
+--           adapter = "copilot",
+--         },
+--         agent = {
+--           adapter = "copilot",
+--         },
+--       },
+--     },
+--     adapters = {
+--       copilot = function() return require('codecompanion.adapters').extend('copilot', {}) end,
+--     },
+--   }
+-- )
 
 require('pairs'):setup(
   {
