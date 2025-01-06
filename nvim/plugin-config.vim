@@ -111,8 +111,8 @@ inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 " Select the first completion item and confirm the completion when no item has been selected
 inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 
-" Use Shift-Tab to accept Copilot's suggestions
-inoremap <silent><script><expr> <S-Tab> copilot#Accept("\<CR>")
+" Use Leader-Tab to accept Copilot's suggestions
+inoremap <silent><script><expr> <leader><Tab> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
 nnoremap cp :CopilotChat
 
