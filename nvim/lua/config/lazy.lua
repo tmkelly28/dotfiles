@@ -37,7 +37,7 @@ require("lazy").setup({
 vim.cmd[[colorscheme tokyonight-moon]]
 
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
+  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "go", "typescript" },
   indent = {
     enable = true
   }
@@ -46,6 +46,11 @@ require'nvim-treesitter.configs'.setup {
 require('render-markdown').setup()
 
 require('copilot').setup()
+-- require('avante_lib').load()
+-- require('avante').setup({
+--   provider = 'copilot', -- claude, copilot
+--   auto_suggestions_provider = "copilot"
+-- })
 
 require('pairs'):setup(
   {
@@ -74,4 +79,4 @@ require("bufferline").setup(
 )
 
 require('mini.splitjoin').setup()
-require('mini.animate').setup()
+-- require('mini.animate').setup()

@@ -23,7 +23,7 @@ return {
   {
     "MeanderingProgrammer/render-markdown.nvim",
     opts = {
-      file_types = { "markdown", "Avante", "copilot-chat" },
+      file_types = { "markdown", "Avante", "copilot-chat", "codecompanion" },
     },
     ft = { "markdown", "codecompanion", "Avante", "copilot-chat" }
   },

@@ -116,7 +116,7 @@ inoremap <silent><script><expr> <leader><Tab> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
 nnoremap cp :CopilotChat
 
-nnoremap <leader>? :CopilotChatToggle<CR>
+nnoremap <leader>? :CodeCompanionChat<CR>
 
 " Gutentags
 " https://www.reddit.com/r/vim/comments/d77t6j/guide_how_to_setup_ctags_with_gutentags_properly/
