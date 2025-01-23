@@ -48,11 +48,25 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " ale
 let g:ale_linters = {
-      \ 'javascript': ['eslint'],
-      \ 'vue': ['eslint'],
+      \ 'javascript': ['prettier'],
+      \ 'typescript': ['prettier'],
+      \ 'javascriptreact': ['prettier'],
+      \ 'typescriptreact': ['prettier'],
+      \ 'vue': ['prettier'],
       \ 'ruby': ['rubocop'],
       \ 'bash': ['shellcheck'],
       \ }
+let g:ale_fixers = {
+      \ 'javascript': ['prettier'],
+      \ 'typescript': ['prettier'],
+      \ 'javascriptreact': ['prettier'],
+      \ 'typescriptreact': ['prettier'],
+      \ 'vue': ['prettier'],
+      \ 'ruby': ['rubocop'],
+      \ 'bash': ['shellcheck'],
+      \ }
+let g:ale_linters_explicit = 1
+let g:ale_fix_on_save = 1
 
 " markdown
 let g:markdown_fenced_languages = ['html', 'css', 'javascript', 'json', 'ruby', 'python']
