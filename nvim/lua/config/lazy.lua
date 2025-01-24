@@ -37,7 +37,7 @@ require("lazy").setup({
 vim.cmd[[colorscheme tokyonight-moon]]
 
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "go", "typescript" },
+  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "go", "typescript", "yaml" },
   indent = {
     enable = true
   }
