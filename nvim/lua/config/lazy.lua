@@ -67,16 +67,11 @@ require('lualine').setup(
     }
   }
 )
-require("bufferline").setup(
-  {
-    highlights = {
-      fill = {
-        bg = '#222334',
-        fg = '#cad2f2',
-      }
-    }
-  }
-)
+require("bufferline").setup()
+
+vim.cmd [[
+  highlight BufferLineFill guibg=NONE
+  highlight BufferLineBackground guibg=NONE
+]]
 
 require('mini.splitjoin').setup()
--- require('mini.animate').setup()

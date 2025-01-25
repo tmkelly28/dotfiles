@@ -7,29 +7,6 @@ command! -bang -nargs=* GGrep
   \   'git grep --line-number -- '.shellescape(<q-args>), 0,
   \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
 
-" NerdTree
-autocmd StdinReadPre * let s:std_in=1
-
-" Open NERDTREE when vim opens
-autocmd VimEnter *
-            \   if !argc()
-            \ |   NERDTree
-            \ |   wincmd w
-            \ | endif
-"autocmd vimenter * if @% !~# '.vimrc' && @% !~# '.tmux.conf' && @% !~# '.bash_profile' && @% !~# '.bashrc' && @% !~# '.eslintrc.json' && @% !~# '.todo'| NERDTree | endif
-
-" Close vim if only NERDTree is open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Navigation shortcuts
-nnoremap <S-n> :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
-let NERDTreeIgnore=['.git$','.DS_Store', 'tags$', '__pycache__']
-
-" Vim-Airline
-" let g:airline#extensions#tabline#enabled=1
-" let g:airline_powerline_fonts=1
-
 " The Silver Searcher
 if executable('ag')
   " Use ag over grep
