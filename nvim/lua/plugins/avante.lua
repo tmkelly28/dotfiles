@@ -26,7 +26,7 @@ return {}
 --       "HakonHarnes/img-clip.nvim",
 --       event = "VeryLazy",
 --       opts = {
---         provider = "copilot",
+--         provider = "claude",
 --         auto_suggestions_provider = "copilot",
 --         -- recommended settings
 --         default = {

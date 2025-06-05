@@ -30,8 +30,8 @@ require("lazy").setup({
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
   install = { colorscheme = { "tokyonight-moon" } },
-  -- automatically check for plugin updates
-  checker = { enabled = true },
+  -- automatically check for plugin updates every day
+  checker = { enabled = true, frequency = 86400 },
 })
 
 vim.cmd[[colorscheme tokyonight-moon]]
@@ -48,7 +48,7 @@ require('render-markdown').setup()
 require('copilot').setup()
 -- require('avante_lib').load()
 -- require('avante').setup({
---   provider = 'copilot', -- claude, copilot
+--   provider = 'claude', -- claude, copilot
 --   auto_suggestions_provider = "copilot"
 -- })
 

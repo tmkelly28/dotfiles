@@ -18,6 +18,8 @@ local function my_on_attach(bufnr)
   -- custom mappings
   vim.keymap.set('n', 'x', api.node.navigate.parent_close,        opts('Close Directory'))
   vim.keymap.set('n', '?', api.tree.toggle_help,                  opts('Help'))
+  vim.keymap.set("n", "r", api.tree.reload,                       opts("Refresh"))
+  vim.keymap.set("n", "m", api.fs.rename_full,                         opts("Rename"))
 end
 
 vim.api.nvim_set_keymap('n', 'N', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
@@ -29,13 +31,18 @@ require("nvim-tree").setup({
     sorter = "case_sensitive",
   },
   view = {
-    width = 30,
+    width = 45,
   },
   renderer = {
     group_empty = true,
   },
   filters = {
     dotfiles = false,
+    exclude = {
+      "~/dotfiles/.zsh-local.zsh",
+      "nvim/local.vim",
+      ".tmux-local.conf",
+    },
   },
   hijack_directories = {
     enable = false,
@@ -65,6 +72,8 @@ end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 vim.cmd("highlight NvimTreeNormal guibg=NONE ctermbg=NONE")
+vim.cmd("highlight NvimTreeNormalNC guibg=NONE ctermbg=NONE")
+vim.cmd("highlight NvimTreeWinSeparator guibg=NONE ctermbg=NONE")
 
 -- close nvim-tree when it's the only window
 vim.api.nvim_create_autocmd("BufEnter", {

@@ -65,8 +65,10 @@ let g:coc_global_extensions = ['coc-solargraph']
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
+" nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+nmap <silent> gi :GoImplements<CR>
 
 " Highlight symbol under cursor on CursorHold
 " autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -101,6 +103,7 @@ inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
 inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 " Select the first completion item and confirm the completion when no item has been selected
 inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+autocmd BufWritePre *.ts* :silent call CocAction('runCommand', 'editor.action.organizeImport')
 
 " Use Leader-Tab to accept Copilot's suggestions
 inoremap <silent><script><expr> <leader><Tab> copilot#Accept("\<CR>")

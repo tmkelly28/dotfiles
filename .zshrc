@@ -52,6 +52,7 @@ PATH="${HOME}/.cargo/bin:${PATH}"
 # Ruby/RVM
 PATH="${PATH}:${HOME}/.rvm/bin"
 PATH="${PATH}:/usr/local/mysql/bin"
+PATH="${PATH}:/Users/$(whoami)/ghmcp"
 export PATH
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 

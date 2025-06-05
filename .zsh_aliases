@@ -5,6 +5,7 @@ alias dot='(cd ~/dotfiles && nvim ~/dotfiles)'
 
 # python3
 alias python='python3'
+alias pip='pip3'
 # alias python=~/opt/miniconda3/bin/python
 
 # shortcuts
@@ -24,5 +25,20 @@ alias gl='pretty_git_log'
 alias gv='git diff --name-only | uniq | xargs nvim'
 alias clean_up_all_branches='git branch | grep -v "staging" | grep -v "main" | grep -v "zz-" | xargs git branch -D'
 
+# docker
+alias dcd='docker compose down -v --remove-orphans'
+alias dcbw='docker compose build web'
+
 alias lorem='cat ~/dotfiles/placeholders/lorem.txt | pbcopy'
 alias hipsum='cat ~/dotfiles/placeholders/hipsum.txt | pbcopy'
+
+alias claudeconf='v ~/Library/Application\ Support/Claude/claude_desktop_config.json'
+
+find_and_replace() {
+  echo $1
+  git grep -l $1
+  echo $1
+  git grep -l $1 | xargs sed -i '' -e "s/$1/$2/g"
+}
+
+alias ports='lsof -i -n -P | grep TCP'
