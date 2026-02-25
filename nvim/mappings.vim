@@ -87,3 +87,7 @@ nnoremap t[ :tprevious<cr>
 
 " Execute current script
 nnoremap <leader>r :!%:p<cr>
+
+nnoremap cf :call CurrentFile()<cr>
+nnoremap cl :call CopyFileLineToClipboard()<CR>
+

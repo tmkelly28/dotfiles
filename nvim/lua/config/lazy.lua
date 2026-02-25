@@ -37,7 +37,7 @@ require("lazy").setup({
 vim.cmd[[colorscheme tokyonight-moon]]
 
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "go", "typescript", "yaml" },
+  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "go", "typescript", "yaml", "hcl" },
   indent = {
     enable = true
   }
@@ -52,13 +52,7 @@ require('copilot').setup()
 --   auto_suggestions_provider = "copilot"
 -- })
 
-require('pairs'):setup(
-  {
-    indent = {
-      python = 0,
-    }
-  }
-)
+require('pairs')
 
 require('lualine').setup(
   {

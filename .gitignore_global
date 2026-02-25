@@ -14,3 +14,4 @@ db/seeds/tk_*.rb
 tmux-client-*
 .vim
 *_secrets.sh
+_doc

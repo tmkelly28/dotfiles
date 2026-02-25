@@ -23,6 +23,7 @@ alias gb="git branch | grep -v 'zz-'" # I prefix stale branches I want to keep w
 alias gdiff='git diff staging...HEAD'
 alias gl='pretty_git_log'
 alias gv='git diff --name-only | uniq | xargs nvim'
+alias gchanged='git diff HEAD..staging --name-only | uniq | xargs nvim'
 alias clean_up_all_branches='git branch | grep -v "staging" | grep -v "main" | grep -v "zz-" | xargs git branch -D'
 
 # docker

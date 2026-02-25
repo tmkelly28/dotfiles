@@ -106,3 +106,15 @@ function! SendRubocop()
   let cmd = '"rubocop -A ' . ' ./' . path . '.rb"'
   execute '!tmux send-keys -t 1 ' . cmd . ' Enter'
 endfunction
+
+function! CurrentFile()
+  execute 'redir @* | echon @% | redir END'
+endfunction
+
+function! CopyFileLineToClipboard()
+    let filepath = expand('%')
+    let line_num = line('.')
+    let result = filepath . ':' . line_num
+    let @+ = result
+    echo 'Copied: ' . result
+endfunction

@@ -59,3 +59,7 @@ Host *
 
 ## Package Managers
 - `brew`
+
+## TODO
+
+Add symlink for `~/Library/Application Support/k9s`

@@ -28,6 +28,7 @@ export M2=${M2_HOME}/bin
 # export PYSPARK_DRIVER_PYTHON=~/opt/miniconda3/bin/python
 
 # Path
+PATH="${HOME}/.local/bin:${PATH}"
 PATH="/usr/local/bin:${PATH}"
 PATH="${PATH}:~/.vimpkg/bin"
 ## Java/Maven
@@ -106,3 +107,5 @@ if [ -f '/Users/tom/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tom/g
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# export K9S_CONFIG_DIR="$HOME/Library/Application Support/k9s"
