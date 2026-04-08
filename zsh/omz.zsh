@@ -72,6 +72,7 @@ plugins=(
   git
   vi-mode
   macos
+  terraform
 )
 
 source $ZSH/oh-my-zsh.sh

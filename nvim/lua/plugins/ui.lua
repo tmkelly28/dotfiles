@@ -1,4 +1,9 @@
 return {
+  {
+    "nvim-treesitter/nvim-treesitter",
+    branch = "main",
+    build = ":TSUpdate",
+  },
   {"MunifTanjim/nui.nvim"},
   {"nvim-tree/nvim-web-devicons"},
   {"stevearc/dressing.nvim"},
@@ -32,9 +37,10 @@ return {
   {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
   {
     "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
     opts = {
       file_types = { "markdown", "Avante", "copilot-chat", "codecompanion" },
     },
-    ft = { "markdown", "codecompanion", "Avante", "copilot-chat" }
+    ft = { "md", "markdown", "codecompanion", "Avante", "copilot-chat" }
   },
 }

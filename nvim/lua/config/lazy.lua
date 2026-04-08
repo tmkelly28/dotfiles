@@ -36,14 +36,29 @@ require("lazy").setup({
 
 vim.cmd[[colorscheme tokyonight-moon]]
 
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "go", "typescript", "yaml", "hcl" },
-  indent = {
-    enable = true
-  }
-}
+require'nvim-treesitter'.setup()
 
-require('render-markdown').setup()
+-- Install parsers if missing (async, non-blocking)
+local ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "go", "typescript", "yaml", "hcl" }
+local installed = {}
+for _, p in ipairs(require'nvim-treesitter'.get_installed()) do
+  installed[p] = true
+end
+local to_install = vim.tbl_filter(function(p) return not installed[p] end, ensure_installed)
+if #to_install > 0 then
+  require'nvim-treesitter'.install(to_install)
+end
+
+-- Enable treesitter-based indentation
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function()
+    if pcall(vim.treesitter.start) then
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end
+  end,
+})
+
+require('render-markdown').setup({ latex = { enabled = false } })
 
 require('copilot').setup()
 -- require('avante_lib').load()

@@ -4,8 +4,10 @@ source ~/dotfiles/git/gpo.sh
 source ~/dotfiles/git/pretty_git_logs.sh
 source ~/dotfiles/git/open_where_regex.sh
 
+ZSH_THEME_TF_PROMPT_PREFIX="%{$fg[blue]%}"
+ZSH_THEME_TF_PROMPT_SUFFIX="%{$reset_color%}"
 local prompt_jobs="%(1j.%{$fg[green]%}✦%{$reset_color%} .)"
-PROMPT+='${prompt_jobs}'
+PROMPT+='${prompt_jobs}$(_tf="$(tf_prompt_info)"; [[ -n "$_tf" ]] && echo "$_tf ")'
 
 export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
 export KEYTIMEOUT=1 # key timeout for vi-mode
