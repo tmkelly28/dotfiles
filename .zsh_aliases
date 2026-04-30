@@ -33,7 +33,8 @@ alias dcbw='docker compose build web'
 alias lorem='cat ~/dotfiles/placeholders/lorem.txt | pbcopy'
 alias hipsum='cat ~/dotfiles/placeholders/hipsum.txt | pbcopy'
 
-alias claudeconf='v ~/Library/Application\ Support/Claude/claude_desktop_config.json'
+alias claude-conf='v ~/Library/Application\ Support/Claude/claude_desktop_config.json'
+alias claude-settings='v ~/.claude/settings.json'
 
 find_and_replace() {
   echo $1

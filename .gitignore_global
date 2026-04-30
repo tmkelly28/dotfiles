@@ -15,4 +15,3 @@ tmux-client-*
 .vim
 *_secrets.sh
 _doc
-.claude

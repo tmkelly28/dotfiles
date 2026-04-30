@@ -1,5 +1,5 @@
 return {
-  {'ap/vim-css-color'},
+  {'NvChad/nvim-colorizer.lua', opts = { user_default_options = { names = false } }},
   {'leafgarland/typescript-vim'},
   {'peitalin/vim-jsx-typescript'},
   {'moll/vim-node'},
