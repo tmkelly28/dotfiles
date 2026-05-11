@@ -15,3 +15,6 @@ tmux-client-*
 .vim
 *_secrets.sh
 _doc
+
+graphify-out
+.graphifyignore
