@@ -111,3 +111,5 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # export K9S_CONFIG_DIR="$HOME/Library/Application Support/k9s"
+
+export CLAUDE_CODE_NO_FLICKER=1

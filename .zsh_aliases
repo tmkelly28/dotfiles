@@ -36,6 +36,10 @@ alias hipsum='cat ~/dotfiles/placeholders/hipsum.txt | pbcopy'
 alias claude-conf='v ~/Library/Application\ Support/Claude/claude_desktop_config.json'
 alias claude-settings='v ~/.claude/settings.json'
 
+greview() {
+  nvim -c "let g:gitgutter_diff_base = 'HEAD~1'" -p $(git diff-tree --no-commit-id --name-only -r HEAD)
+}
+
 find_and_replace() {
   echo $1
   git grep -l $1
