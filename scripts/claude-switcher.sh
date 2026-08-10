@@ -1,9 +1,19 @@
 #!/usr/bin/env bash
 # fzf switcher listing every live Claude instance; Enter jumps to its pane.
-# Runs in its own persistent tmux window (see claude-switcher-open.sh) --
-# jumping does NOT close it, so flipping back to this window shows the list
-# again, freshly rebuilt. Esc/Ctrl-C (empty fzf selection) is the only way
-# out, and closes (kills) this window.
+# Jumping does NOT exit -- flipping back to wherever this is running shows
+# the list again, freshly rebuilt. Esc/Ctrl-C (empty fzf selection) is the
+# only way out.
+#
+# Usage: claude-switcher.sh [--own-window]
+#   --own-window  This is running in a dedicated window claude-switcher-open.sh
+#                 created just for it (the invoking pane was busy), so on exit
+#                 kill that window too. Without it (the common case: it's
+#                 running inline in a pane that was already idle) exit just
+#                 returns control to that pane's normal shell -- nothing to
+#                 clean up.
+
+own_window=0
+[ "${1:-}" = "--own-window" ] && own_window=1
 
 dir="$HOME/.claude/status"
 panes_helper="$HOME/dotfiles/scripts/claude-live-panes.sh"
@@ -77,10 +87,13 @@ while true; do
   sess="$(tmux display-message -p -t "$pane" '#{session_name}' 2>/dev/null)"
   [ -n "$sess" ] || continue
   tmux switch-client -t "$sess" \; select-window -t "$pane" \; select-pane -t "$pane"
-  # Loop back around -- this window stays alive in the background so flipping
-  # back to it (prefix + a again) shows a freshly rebuilt list.
+  # Loop back around -- this stays alive in the background so flipping back
+  # to it (prefix + a again, or just navigating back to the pane) shows a
+  # freshly rebuilt list.
 done
 
-self_win="$(tmux display-message -p '#{window_id}' 2>/dev/null)"
-[ -n "$self_win" ] && tmux kill-window -t "$self_win" 2>/dev/null
+if [ "$own_window" = "1" ]; then
+  self_win="$(tmux display-message -p '#{window_id}' 2>/dev/null)"
+  [ -n "$self_win" ] && tmux kill-window -t "$self_win" 2>/dev/null
+fi
 exit 0
