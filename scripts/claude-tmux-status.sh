@@ -38,13 +38,13 @@ pane_working() {  # 0 (true) if the pane's footer shows Claude is processing
 classify_idle() {  # state sid label -- for a pane that is NOT actively working
   local state="$1" sid="$2" label="$3"
   case "$state" in
-    permission) perm_l="$perm_l #[fg=colour208,bold]✋${label}#[default]" ;;
+    permission) perm_l="$perm_l #[fg=colour208,bold]✋ ${label}#[default]" ;;
     done)
       if [ -n "$sid" ] && [ -f "$dir/.viewed-$sid" ]; then
         viewed=$((viewed + 1))
       else
         done_count=$((done_count + 1))
-        [ "$done_count" -le "$DONE_CAP" ] && done_l="$done_l #[fg=colour46,bold]✅${label}#[default]"
+        [ "$done_count" -le "$DONE_CAP" ] && done_l="$done_l #[fg=colour46,bold]✅ ${label}#[default]"
       fi ;;
     *)          viewed=$((viewed + 1)) ;;   # idle / stuck-running / waiting / untracked
   esac

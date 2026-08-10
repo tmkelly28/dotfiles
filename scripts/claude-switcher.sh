@@ -4,6 +4,11 @@
 # the list again, freshly rebuilt. Esc/Ctrl-C (empty fzf selection) is the
 # only way out.
 #
+# While fzf is open, a background loop sends it a fake F5 keypress every
+# REFRESH_INTERVAL seconds (via `tmux send-keys` into this script's own
+# pane), which fzf is bound to treat as "reload the list" -- fzf has no
+# native timer, so this is the trick to get a live-updating view.
+#
 # Usage: claude-switcher.sh [--own-window]
 #   --own-window  This is running in a dedicated window claude-switcher-open.sh
 #                 created just for it (the invoking pane was busy), so on exit
@@ -18,6 +23,7 @@ own_window=0
 dir="$HOME/.claude/status"
 panes_helper="$HOME/dotfiles/scripts/claude-live-panes.sh"
 WORKING_MARK='esc to interrupt'
+REFRESH_INTERVAL=2   # seconds between auto-reloads of the list while fzf is open
 
 FZF=fzf
 command -v fzf >/dev/null 2>&1 || FZF="$HOME/.fzf/bin/fzf"   # fallback path; adjust if needed
@@ -72,13 +78,37 @@ build_rows() {
   done
 }
 
-while true; do
+rows_or_fallback() {
+  local rows
   rows="$(build_rows)"
-  [ -n "$rows" ] || rows=$'\t(no live Claude instances -- Esc to close)'
+  if [ -n "$rows" ]; then printf '%s\n' "$rows"; else printf '\t(no live Claude instances -- Esc to close)\n'; fi
+}
+
+# Invoked by fzf's own F5 reload binding below -- just print a fresh list and exit.
+if [ "${1:-}" = "--build-rows" ]; then
+  rows_or_fallback
+  exit 0
+fi
+
+self_pane="$(tmux display-message -p '#{pane_id}' 2>/dev/null)"
+refresher_pid=""
+stop_refresher() { [ -n "$refresher_pid" ] && kill "$refresher_pid" 2>/dev/null; refresher_pid=""; }
+trap stop_refresher EXIT
+
+while true; do
+  rows="$(rows_or_fallback)"
+
+  if [ -n "$self_pane" ]; then
+    ( while sleep "$REFRESH_INTERVAL"; do tmux send-keys -t "$self_pane" F5 2>/dev/null || exit; done ) &
+    refresher_pid=$!
+  fi
 
   sel="$(printf '%s' "$rows" | "$FZF" \
     --ansi --delimiter='\t' --with-nth=2.. --prompt='claude ▸ ' \
-    --preview 'tmux capture-pane -pe -J -t {1}' --preview-window=right:60%)"
+    --preview 'tmux capture-pane -pe -J -t {1}' --preview-window=right:60% \
+    --bind "f5:reload(\"$0\" --build-rows)")"
+
+  stop_refresher
 
   [ -n "$sel" ] || break   # Esc / Ctrl-C -- explicit cancel, close the window
 
