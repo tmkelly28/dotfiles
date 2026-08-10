@@ -2,7 +2,23 @@
   "permissions": {
     "allow": [
       "Bash(tmux source-file *)",
-      "Bash(tmux show-hooks *)"
+      "Bash(tmux show-hooks *)",
+      "Bash(rtk jq *)",
+      "Bash(rtk grep *)",
+      "Bash(rtk ls *)",
+      "Bash(python3 -c 'import os,sys;print\\(os.path.realpath\\(sys.argv[1]\\)\\)' /opt/homebrew/bin/alerter)",
+      "Bash(/opt/homebrew/bin/alerter -help)",
+      "Bash(brew list *)",
+      "WebFetch(domain:formulae.brew.sh)",
+      "WebFetch(domain:eu-central-1-1.aws.cloud2.influxdata.com)",
+      "Bash(/opt/homebrew/bin/alerter --version)",
+      "Bash(rtk read *)",
+      "Read(//opt/homebrew/Cellar/alerter/26.5/bin/**)",
+      "Bash(rtk find *)",
+      "Bash(osascript -e 'tell application \"System Events\" to get name of every process whose background only is false')",
+      "Bash(tmux list-keys *)",
+      "Bash(tmux show-options *)",
+      "Bash(tmux ls *)"
     ]
   }
 }
